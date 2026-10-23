@@ -1,0 +1,52 @@
+{
+  "classes": 60,
+  "epochs": 55,
+  "batch_size": 16,
+  "frames": 300,
+  "lr": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "aux_weight": 0.2,
+  "milestones": [
+    35,
+    45,
+    55
+  ],
+  "gamma": 0.1,
+  "channels": [
+    64,
+    128,
+    256
+  ],
+  "dropout": 0.1,
+  "bandwidth": 0.1,
+  "threshold": 0.3,
+  "kde_samples": 256,
+  "topk": 5,
+  "verify_threshold": 0.05,
+  "fusion_weights": [
+    1.0,
+    0.5,
+    0.5
+  ],
+  "density_mode": "density",
+  "ph_frames": 8,
+  "ph_points": 96,
+  "time_scale": 0.2,
+  "prefix_frames": 60,
+  "threshold_grid": [
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.7
+  ],
+  "workers": 0,
+  "seed": 1,
+  "contact_radius": 0.35,
+  "contact_temperature": 0.25,
+  "contact_threshold": 0.3
+}
