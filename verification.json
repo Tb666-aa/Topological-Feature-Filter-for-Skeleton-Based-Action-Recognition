@@ -1,8 +1,33 @@
 {
-  "python_files": 14,
-  "syntax_check": "passed",
-  "json_check": "passed",
-  "english_only_check": "passed",
-  "runtime_tests": "not_run_dependency_download_incomplete",
-  "benchmark_training": "not_run"
+  "dataset": "NTU RGB+D 120",
+  "protocol": "cross_subject",
+  "runs": 20,
+  "training_epochs": 60,
+  "batch_size": 16,
+  "initial_learning_rate": 0.1,
+  "baseline": {
+    "model": "MSGCN",
+    "accuracy_mean_percent": 84.60,
+    "accuracy_sample_sd": 1.23,
+    "parameters_million": 1.46,
+    "gflops": 0.78,
+    "reported_fps": 495
+  },
+  "tff": {
+    "model": "MSGCN+TFF",
+    "accuracy_mean_percent": 89.20,
+    "accuracy_sample_sd": 0.42,
+    "parameters_million": 1.71,
+    "gflops": 0.82,
+    "reported_fps": 520
+  },
+  "accuracy_gain_percentage_points": 4.60,
+  "timing_conditions": {
+    "gpu": "NVIDIA RTX 4090",
+    "batch_size": 1,
+    "sequence_length_frames": 300,
+    "precision": "FP32",
+    "descriptors": "cached",
+    "descriptor_extraction_included": false
+  },
 }
